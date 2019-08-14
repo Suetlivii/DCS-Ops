@@ -35,7 +35,7 @@ A2AConfig =
         isGci = false,
         grouping = 2,
         overhead = 1,
-        airCraftLimit = 8,
+        airCraftLimit = 4,
         minFrontlineDistance = 40000,
         maxFrontlineDistance = 100000
     }
@@ -43,11 +43,14 @@ A2AConfig =
 
 local redZone = ZONE:FindByName("RedZone")
 local blueZone = ZONE:FindByName("BlueZone")
-
-mainA2AController = A2AController:New()
 local frontZone = ZONE:FindByName("FrontZone")
-mainA2AController:SetDispatcher("RedAwacs", 180000, 60000, 140000, frontZone, redZone, blueZone)
 
-mainA2AConfigurator = A2AConfigurator:New()
-mainA2AConfigurator:SetA2AConfigs(A2AConfig)
-mainA2AConfigurator:SetController(mainA2AController)
+if ME_isTurkCap == true then 
+    mainA2AController = A2AController:New()
+    mainA2AController:SetDispatcher("RedAwacs", 180000, 100000, 90000, frontZone, redZone, blueZone)
+    mainA2AController.A2ADispatcher:SetDisengageRadius(50000)
+
+    mainA2AConfigurator = A2AConfigurator:New()
+    mainA2AConfigurator:SetA2AConfigs(A2AConfig)
+    mainA2AConfigurator:SetController(mainA2AController)
+end
