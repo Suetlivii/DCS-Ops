@@ -36,27 +36,28 @@ A2AConfig =
         grouping = 2,
         overhead = 1,
         airCraftLimit = 8,
-        minCapTime = 800,
-        maxCapTime = 1000,
-        minFrontlineDistance = 40000,
-        maxFrontlineDistance = 100000
-    },
-    {
-        groupPrefix = "TurkF16GCI",
-        spawnedGroupPrefix = "TurkF16GCISpawned",
-        minAltitude = 6500,
-        maxAltitude = 10000,
-        airBase = "Batumi",
-        isCap = false,
-        isGci = true,
-        grouping = 2,
-        overhead = 1,
-        airCraftLimit = 4,
-        minCapTime = 800,
-        maxCapTime = 1000,
+        minCapTime = 5,
+        maxCapTime = 10,
         minFrontlineDistance = 40000,
         maxFrontlineDistance = 100000
     }
+    --,
+    -- {
+    --     groupPrefix = "TurkF16GCI",
+    --     spawnedGroupPrefix = "TurkF16GCISpawned",
+    --     minAltitude = 6500,
+    --     maxAltitude = 10000,
+    --     airBase = "Batumi",
+    --     isCap = false,
+    --     isGci = true,
+    --     grouping = 2,
+    --     overhead = 1,
+    --     airCraftLimit = 4,
+    --     minCapTime = 800,
+    --     maxCapTime = 1000,
+    --     minFrontlineDistance = 40000,
+    --     maxFrontlineDistance = 100000
+    -- }
 }
 
 local redZone = ZONE:FindByName("RedZone")
@@ -139,3 +140,7 @@ if ME_TurkBAI == true then
     mainHeliA2GController:SetZones(redHeliAttackZone, redHeliPatrolZone, blueZone)
     mainHeliA2GController:StartBAI(1400, 0.5, 2)
 end 
+
+AirRespawner = GroupZoneRespawner:New()
+
+AirRespawner:StartRespawning("RSP", "AirRespawnZone", 20000)
