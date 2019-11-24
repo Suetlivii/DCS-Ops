@@ -37,7 +37,7 @@ if ME_isRedCap == true then
     RedA2ADispatcher:SetEngageRadius( 50000 )
     RedA2ADispatcher:SetGciRadius( 120000 )
     RedA2ADispatcher:SetDisengageRadius(130000)
-    RedA2ADispatcher:SetTacticalDisplay( true )
+    --RedA2ADispatcher:SetTacticalDisplay( true )
 
     -- local RedBorderZone = ZONE:FindByName("BorderZone")
     -- RedA2ADispatcher:SetBorderZone( BorderZone )
@@ -111,7 +111,7 @@ if ME_isBlueCap == true then
     BlueA2ADispatcher:SetEngageRadius( 75000 )
     BlueA2ADispatcher:SetGciRadius( 120000 )
     BlueA2ADispatcher:SetDisengageRadius(130000)
-    BlueA2ADispatcher:SetTacticalDisplay( true )
+    --BlueA2ADispatcher:SetTacticalDisplay( true )
 
     -- local BlueBorderZone = ZONE:FindByName("BorderZone")
     -- BlueA2ADispatcher:SetBorderZone( BorderZone )
@@ -145,6 +145,7 @@ end
 
 if ME_isBlueRAT == true then 
     local blueRatPlane = RAT:New("BlueRatC130")
+    blueRatPlane.Debug = false
     blueRatPlane:SetDeparture({"Tbilisi-Lochini", "Kutaisi", "Senaki-Kolkhi"})
     blueRatPlane:SetDestination({"Tbilisi-Lochini", "Kutaisi", "Senaki-Kolkhi"})
 
@@ -153,4 +154,17 @@ if ME_isBlueRAT == true then
     blueRatManager:Add(blueRatPlane, 1)
     blueRatManager:Start(5)
     blueRatManager:Stop(7200)
+end
+
+if ME_isRedRAT == true then 
+    local redRatPlane = RAT:New("USSRAn26RAT")
+    redRatPlane.Debug = false
+    redRatPlane:SetDeparture({"Gudauta", "Nalchik", "Mineralnye Vody"})
+    redRatPlane:SetDestination({"Gudauta", "Nalchik", "Mineralnye Vody"})
+
+    local redRatManager = RATMANAGER:New(2)
+    redRatManager:Add(redRatPlane, 1)
+    redRatManager:Add(redRatPlane, 1)
+    redRatManager:Start(5)
+    redRatManager:Stop(7200)
 end
