@@ -34,9 +34,9 @@ if ME_isRedCap == true then
     -- Setup the A2A dispatcher, and initialize it.
     RedA2ADispatcher = AI_A2A_DISPATCHER:New( RedDetection )
 
-    RedA2ADispatcher:SetEngageRadius( 50000 )
-    RedA2ADispatcher:SetGciRadius( 120000 )
-    RedA2ADispatcher:SetDisengageRadius(130000)
+    RedA2ADispatcher:SetEngageRadius( 75000 )
+    RedA2ADispatcher:SetGciRadius( 150000 )
+    RedA2ADispatcher:SetDisengageRadius(200000)
     --RedA2ADispatcher:SetTacticalDisplay( true )
 
     -- local RedBorderZone = ZONE:FindByName("BorderZone")
@@ -109,8 +109,8 @@ if ME_isBlueCap == true then
     BlueA2ADispatcher = AI_A2A_DISPATCHER:New( BlueDetection )
 
     BlueA2ADispatcher:SetEngageRadius( 75000 )
-    BlueA2ADispatcher:SetGciRadius( 120000 )
-    BlueA2ADispatcher:SetDisengageRadius(130000)
+    BlueA2ADispatcher:SetGciRadius( 150000 )
+    BlueA2ADispatcher:SetDisengageRadius(165000)
     --BlueA2ADispatcher:SetTacticalDisplay( true )
 
     -- local BlueBorderZone = ZONE:FindByName("BorderZone")
