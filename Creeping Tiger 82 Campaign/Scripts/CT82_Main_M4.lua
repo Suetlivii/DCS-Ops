@@ -44,7 +44,7 @@ if ME_isRedCap == true then
 
 
     --https://flightcontrol-master.github.io/MOOSE_DOCS/Documentation/Wrapper.Airbase.html
-    RedA2ADispatcher:SetSquadron( "ShirazTomcat", AIRBASE.PersianGulf.Shiraz_International_Airport, { "Shiraz_Tomcat" }, 20 )
+    RedA2ADispatcher:SetSquadron( "ShirazTomcat", AIRBASE.PersianGulf.Shiraz_International_Airport, { "Shiraz_Tomcat" }, 2 )
 
     -- RedA2ADispatcher:SetSquadronTakeoffInAir( "ShirazTomcat" )
     -- RedA2ADispatcher:SetSquadronTakeoffFromRunway( "ShirazTomcat" )
@@ -71,7 +71,7 @@ if ME_isRedCap == true then
  ------------------------------------------------------------------------------------------------------------------------------
 
     --https://flightcontrol-master.github.io/MOOSE_DOCS/Documentation/Wrapper.Airbase.html
-    RedA2ADispatcher:SetSquadron( "LarMig21", AIRBASE.PersianGulf.Lar_Airbase, { "Lar_Mig21" }, 20 )
+    RedA2ADispatcher:SetSquadron( "LarMig21", AIRBASE.PersianGulf.Lar_Airbase, { "Lar_Mig21" }, 4 )
 
     -- RedA2ADispatcher:SetSquadronTakeoffInAir( "ShirazTomcat" )
     -- RedA2ADispatcher:SetSquadronTakeoffFromRunway( "ShirazTomcat" )
@@ -98,7 +98,7 @@ if ME_isRedCap == true then
  ------------------------------------------------------------------------------------------------------------------------------
 
     --https://flightcontrol-master.github.io/MOOSE_DOCS/Documentation/Wrapper.Airbase.html
-    RedA2ADispatcher:SetSquadron( "KermanMig21", AIRBASE.PersianGulf.Kerman_Airport, { "Lar_Mig21" }, 20 )
+    RedA2ADispatcher:SetSquadron( "KermanMig21", AIRBASE.PersianGulf.Kerman_Airport, { "Lar_Mig21" }, 4 )
 
     -- RedA2ADispatcher:SetSquadronTakeoffInAir( "ShirazTomcat" )
     -- RedA2ADispatcher:SetSquadronTakeoffFromRunway( "ShirazTomcat" )
@@ -145,7 +145,7 @@ if ME_isBlueCap == true then
     -- BlueA2ADispatcher:SetBorderZone( BorderZone )
 
     --https://flightcontrol-master.github.io/MOOSE_DOCS/Documentation/Wrapper.Airbase.html
-    BlueA2ADispatcher:SetSquadron( "MinhadHornet", AIRBASE.PersianGulf.Al_Minhad_AB, { "Minhad_Hornet" }, 20 )
+    BlueA2ADispatcher:SetSquadron( "MinhadHornet", AIRBASE.PersianGulf.Al_Minhad_AB, { "Minhad_Hornet" }, 6 )
 
     -- BlueA2ADispatcher:SetSquadronTakeoffInAir( "F5EBatumi" )
     -- BlueA2ADispatcher:SetSquadronTakeoffFromRunway( "F5EBatumi" )
