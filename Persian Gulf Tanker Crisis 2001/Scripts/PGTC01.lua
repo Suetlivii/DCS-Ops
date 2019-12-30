@@ -147,3 +147,9 @@ if ME_isBlueCap == true then
     end
 
 end
+
+if ME_counterSEAD == true then 
+
+    redCounterSEAD = SEAD:New( {"Iran SA-6", "Iran HAWK", "Iran SA-2", "Iran SA-3" } )
+
+end
